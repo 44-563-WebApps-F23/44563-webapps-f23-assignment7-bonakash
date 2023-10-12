@@ -34,11 +34,12 @@
       function startTime() {
         let reactTime = undefined;
         let endTime = Date.now();
+        let randomCountDown = Math.round(Math.random() * (10 - 2) + 2);
 
-        for (let i = 0; i < 9; i++) {
+        for (let i = 0; i < randomCountDown; i++) {
           setTimeout(function () {
             document.getElementById("counter").innerHTML = `Count: ${i}`;
-          }, (8 - i) * 1000);
+          }, (randomCountDown - i) * 1000);
         }
         setTimeout(function () {
           if (reactTime == undefined) {
